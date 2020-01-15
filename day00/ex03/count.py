@@ -1,25 +1,16 @@
 #!/usr/bin/python3
 
-import sys
+import string
 
-none = ""
-nbchar = 0
-upper_case = 0
-lower_case = 0
-punctuation_marks = 0
-spc = 0
+string_int = ""
 
-args = sys.argv[1]
+def text_analyzer(texte):
+	print ("- ", sum(1 for a in string_int if a.isupper()) ," upper letters")
+	print ("- ", sum(1 for b in string_int if b.islower()) ," lower letters")
+	print ("- ", sum(1 for c in string_int if c in string.punctuation)," punctuation marks")
+	print ("- ", string_int.count(' ')," spaces")
 
-if (arg == none):
-    print("What is the text to analyse?")
-    sys.exit(1)
-
-
+while(string_int == ""):
+	string_int = input("What is the text to analyse?")
 print ("The text contains nbchar characters:")
-print ("- ",upper_case ," upper letters")
-print ("- ",lower_case ," lower letters")
-print ("- ",punctuation_marks ," punctuation marks")
-print ("- ",spc ," spaces")
-
-text_analyser(arg)
+text_analyzer(string_int)
